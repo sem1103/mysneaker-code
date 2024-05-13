@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.scss';
+import Basket from './components/Basket/Basket';
+import Header from './components/Header/Header';
+import Sneakers from './components/Sneakers/Sneakers';
+
 
 function App() {
+  const [basketOpened, setBasketOpened] = React.useState(false);
+
+  const [basketItem, setBasketItem] = React.useState([])
+
+  const basketAdd = (item) =>{
+    setBasketItem(item);
+    console.log(basketItem);
+  }
+
+  const basketOpenedHandler = () =>{
+    setBasketOpened(!basketOpened);
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      {basketOpened ? <Basket  basketItem={basketItem} basketOpenedHandler={basketOpenedHandler}/> : null}
+      <Header  basketOpenedHandler={basketOpenedHandler}/>
+      <main>
+        <Sneakers basketAdd={basketAdd} />
+      </main>
     </div>
   );
 }

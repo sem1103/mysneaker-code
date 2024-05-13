@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: Inter;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: rgb(114,36,138);
+  background: linear-gradient(180deg, rgba(114,36,138,1) 0%, rgba(154,61,182,1) 51%, rgba(181,126,198,1) 100%);
+  min-height: 100vh;
+  position: relative;
+  padding: 50px 0;
+}
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+}
+*{
+  box-sizing: border-box;
+}

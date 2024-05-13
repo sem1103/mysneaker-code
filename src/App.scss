@@ -1,0 +1,13 @@
+.wrapper{
+  max-width: 1080px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 43px 45px;
+}
+.sneakers_items{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

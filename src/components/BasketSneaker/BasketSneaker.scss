@@ -1,0 +1,54 @@
+.sneakerContainer{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #ccc;
+    padding: 7px 15px;
+    border-radius: 10px;
+    position: relative;
+    margin: 5px 0;
+}
+.sneakerImg{
+    flex-basis: 30%;
+}
+.sneakeDesc{
+    flex-basis: calc(70%-5px);
+    margin: 0 0 0 5px;
+}
+.sneakerPrice{
+    font-weight: 600;
+    padding: 0 0 0 10px;
+}
+.closeBtn{
+    border: 1px solid #eee;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    div{
+        height: 100%;
+        width: 80%;
+        margin: auto;
+        position: relative;
+
+        &::after,&::before{
+            content: "";
+            width: 100%;
+            height: 3px;
+            background:#6d6d6d;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0%,-50%) rotate(45deg);
+        }
+        &::before{
+            transform: translate(0%,-50%) rotate(-45deg);
+        }
+    }
+}
+
+
+

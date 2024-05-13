@@ -1,0 +1,71 @@
+#background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #00000086;
+    z-index: 999;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+#content{
+    width: 33%;
+    background-color: #fff;
+    border-radius: 20px 0 0 20px;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#sumPriceItems{
+    padding: 25px;
+
+}
+
+#price, #tax{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#placeOrder{
+    display: block;
+    background-color: #9DD558;
+    border: 0;
+    padding: 18px;
+    width: 75%;
+    margin: 15px auto 0 auto;
+    font: 600 1.1em Intern;
+    border-radius: 18px;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+
+}
+#closedBtn{
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    padding: 15px;
+    border: 5px solid #cf5c5c;
+    transform: translate(-50%,-50%) rotate(-45deg);
+    box-shadow: 0 0 20px #fff  ,0 0 20px #cf5c5c inset;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+#closedBtn:hover{
+    box-shadow: 0 0 20px #cf5c5c , 0 0 20px #fff inset;
+}
+#items{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 5px 0;
+    overflow: auto;
+    height: 100%;
+}
